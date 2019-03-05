@@ -1,1 +1,1 @@
-# balanceofstone.io
+# 이더리움 플랫폼 기반 자산 배분배 게임
