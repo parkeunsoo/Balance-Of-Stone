@@ -1,0 +1,653 @@
+.information{
+  min-width:1570px;
+
+}
+.dropbtn {
+    background-color: #1d1d1d;
+    color: white;
+    padding: 16px;
+    font-size:35px;
+    min-width:340px;
+    font-family: 'Flavors', cursive;
+    color:rgb(191,149,223);
+    text-shadow:4px 4px 4px #3f3f3f;
+    border:solid;
+    border-width:5px;
+    border-color:rgb(30,30,30)
+
+
+}
+
+.dropdown {
+    margin-left:40%;
+    margin-right:40%;
+    margin-top:auto;
+    margin-bottom:auto;
+    position:relative;
+    display: block;
+    font-family: 'Flavors', cursive;
+    font-size: 25px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #1d1d1d;
+    text-align:center;
+    padding-right:40px;
+    border: dashed;
+    border-width:5px;
+    border-color:rgb(255,208,59);
+    border-top-color:rgb(30,30,30);
+    min-width: 290px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+
+    text-decoration: none;
+    display: inline-block;
+}
+
+.dropdown-content a:hover {background-color: #1d1d1d;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #1d1d1d;}
+
+.content{
+    font-family: 'Flavors', cursive;
+    color:rgb(255,208,59);
+    font-size:35px;
+    text-shadow: 4px 4px 4px #3f3f3f;
+    margin-top:11%;
+    min-width:1570px;
+}
+.contentimg{
+    margin-top:1%;
+    min-width:1570px;
+}
+.changeteam{
+    font-family: 'Flavors', cursive;
+    color:rgb(255,208,59);
+    text-shadow: 4px 4px 4px #3f3f3f;
+    margin-top:10%;
+    margin-left:740px;
+
+}
+.ampower{
+  font-family: 'Flavors', cursive;
+  font-size:20px;
+  color:rgb(146,0,0);
+  position:absolute;
+  margin-left:135px;
+  margin-top:3%;
+}
+#todayrevenue{
+  font-family: 'Flavors', cursive;
+  color:rgb(240,240,240);
+  font-size: 35px;
+  min-width:700px;
+  margin-left:auto;
+  margin-right:auto;
+  margin-bottom:auto;
+  margin-top:auto;
+}
+
+#members{
+    font-family: 'Flavors', cursive;
+    float:right;
+    margin-right:2%;
+}
+#mem{
+    font-size: 25px;
+    margin-top:-5%;
+    min-width:450px;
+}
+#imgmem{
+  min-width:450px;
+}
+#shop{
+  margin-left:8%;
+  cursor:pointer;
+}
+#power{
+  margin-left:11%;
+  margin-bottom:2%;
+  cursor:pointer;
+}
+#stone{
+  margin-left:32%;
+  cursor:pointer;
+}
+#game{
+  margin-left:11%;
+  cursor:pointer;
+}
+#shopimg{
+  margin-left:6.5%;
+  cursor:pointer;
+}
+#powerimg{
+  margin-left:11.5%;
+  cursor:pointer;
+}
+#stoneimg{
+  margin-left:550px;
+  position:absolute;
+  cursor:pointer;
+}
+#gameimg{
+  margin-left:842px;
+    position:absolute;
+    cursor:pointer;
+}
+#time{
+  font-family: 'Flavors', cursive;
+  margin-left:200px;
+  margin-right:auto;
+  font-size:35px;
+  color:rgb(200,200,200);
+  text-shadow:3px 3px 3px #3f3f3f;
+  position:absolute;
+}
+#changeteam{
+  font-size:23px;
+  cursor:pointer;
+}
+#ether{
+  font-size:15px;
+  text-align:center;
+  padding-left:35px;
+  cursor:pointer;
+}
+#itempop{
+  position:absolute;
+  border-radius:20px;
+  top:30%;
+  bottom:auto;
+  left:250px;
+  right:auto;
+  width:300px;
+  height:400px;
+  z-index:1;
+  visibility:hidden;
+  background-color:rgb(240,240,240);
+  overflow-y: scroll;
+}
+#powerpop{
+  position:absolute;
+  border-radius:20px;
+  top:36.5%;
+  bottom:auto;
+  left:580px;
+  right:auto;
+  width:280px;
+  height:300px;
+  z-index:1;
+  visibility:hidden;
+  background-color:rgb(240,240,240);
+  overflow-y: scroll;
+}
+#stonepop{
+  font-family: 'Flavors', cursive;
+  font-size:35px;
+  color:rgb(220,220,220);
+  position:absolute;
+  border-radius:20px;
+  top:34%;
+  bottom:auto;
+  left:610px;
+  right:auto;
+  width:400px;
+  height:300px;
+  z-index:1;
+  visibility:hidden;
+  background-color:rgb(45,45,80);
+}
+#suppop{
+  font-family: 'Flavors', cursive;
+  font-size:20px;
+  color:rgb(143,73,245);
+  text-shadow:1px 1px 1px rgb(30,30,30);
+  position:absolute;
+  top:30%;
+  bottom:auto;
+  left:685px;
+  right:auto;
+  width:250px;
+  height:400px;
+  z-index:1;
+  visibility:hidden;
+  background-color:rgb(240,240,240);
+}
+#changepop{
+  font-family: 'Flavors', cursive;
+  font-size:35px;
+  color:rgb(220,220,220);
+  position:absolute;
+  border-radius:20px;
+  top:34%;
+  bottom:auto;
+  left:415px;
+  right:auto;
+  width:800px;
+  height:300px;
+  z-index:1;
+  visibility:hidden;
+  background-color:rgb(45,45,80);
+}
+#INSHOP{
+  font-family: 'Flavors', cursive;
+  font-size:40px;
+  margin-left:27%;
+  color:rgb(255,208,59);
+  text-align:center;
+  text-shadow:3px 3px 3px #101010;
+}
+#INpower{
+  font-family: 'Flavors', cursive;
+  font-size:40px;
+  margin-left:10%;
+  color:rgb(255,208,59);
+  text-align:center;
+  text-shadow:3px 3px 3px #101010;
+}
+#Ipower{
+  font-family: 'Flavors', cursive;
+  font-size:20px;
+  margin-left:10px;
+  color:rgb(146,0,0);
+  text-align:center;
+  text-shadow:1px 1px 1px rgb(60,60,60);
+}
+#teminfo{
+  position:absolute;
+}
+#price{
+  font-family: 'Flavors', cursive;
+}
+#power{
+  font-family: 'Flavors', cursive;
+}
+#buy{
+  font-family: 'Flavors', cursive;
+  width:50px;
+  height:20px;
+  margin-top:auto;
+  margin-left:135px;
+}
+
+#allstone{
+ font-family: 'Flavors', cursive;
+ color:rgb(220,220,220);
+ font-size:30px;
+ position:absolute;
+ margin-top:10px;
+}
+#score{
+  display:block;
+  position:relative;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top:25px;
+  border:solid;
+  border-color:rgb(180,180,180);
+  width:200px;
+  height:200px;
+}
+#supplyenergy {
+  background-color:rgb(143,73,245);
+  border: none;
+  color: rgb(240,240,240);
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'Flavors', cursive;
+  font-size: 1em;
+  font-size: 22px;
+  line-height: 1em;
+  left:15px;
+  margin: 15px 40px;
+  outline: none;
+  padding: 12px 40px 10px;
+  position: relative;
+  font-weight: 700;
+}
+#supplyenergy:before,
+#supplyenergy:after {
+  border-color: transparent;
+  -webkit-transition: all 0.00s;
+  transition: all 0.00s;
+  border-style: solid;
+  border-width: 0;
+  content: "";
+  height: 24px;
+  position: absolute;
+  width: 24px;
+}
+#supplyenergy:before {
+  border-color:rgb(143,73,245);
+  border-right-width: 2px;
+  border-top-width: 2px;
+  right: -5px;
+  top: -5px;
+}
+#supplyenergy:after {
+  border-bottom-width: 2px;
+  border-color:rgb(143,73,245);
+  border-left-width: 2px;
+  bottom: -5px;
+  left: -5px;
+}
+#supplyenergy:hover,
+#supplyenergy.hover {
+  background-color:rgb(143,73,245);
+}
+#supplyenergy:hover:before,
+#supplyenergy.hover:before,
+#supplyenergy:hover:after,
+#supplyenergy.hover:after {
+  height: 100%;
+  width: 100%;
+}
+#send {
+  background-color:rgb(143,73,245);
+  border: none;
+  color: rgb(240,240,240);
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'Flavors', cursive;
+  font-size: 1em;
+  font-size: 22px;
+  line-height: 1em;
+  left:19px;
+  margin: 15px 40px;
+  outline: none;
+  padding: 12px 40px 10px;
+  position: relative;
+  font-weight: 700;
+}
+#send:before,
+#send:after {
+  border-color: transparent;
+  -webkit-transition: all 0.0s;
+  transition: all 0.0s;
+  border-style: solid;
+  border-width: 0;
+  content: "";
+  height: 24px;
+  position: absolute;
+  width: 24px;
+}
+#send:before {
+  border-color:rgb(143,73,245);
+  border-right-width: 2px;
+  border-top-width: 2px;
+  right: -5px;
+  top: -5px;
+}
+#send:after {
+  border-bottom-width: 2px;
+  border-color:rgb(143,73,245);
+  border-left-width: 2px;
+  bottom: -5px;
+  left: -5px;
+}
+#send:hover,
+#send.hover {
+  background-color:rgb(143,73,245);
+}
+#send:hover:before,
+#send.hover:before,
+#send:hover:after,
+#send.hover:after {
+  height: 100%;
+  width: 100%;
+}
+#buy {
+  background-color:rgb(200,200,200);
+  border: none;
+  color: rgb(30,30,30);
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'Flavors', cursive;
+  font-size: 1em;
+  font-size: 12px;
+  line-height: 1em;
+  left:19px;
+  margin-left:auto;
+  outline: none;
+  padding:auto;
+  position: absolute;
+  font-weight: 700;
+}
+#buy:before,
+#buy:after {
+  border-color: transparent;
+  -webkit-transition: all 0.0s;
+  transition: all 0.0s;
+  border-style: solid;
+  border-width: 0;
+  content: "";
+  height: 24px;
+  position: absolute;
+  width: 12px;
+}
+#buy:before {
+  border-color:rgb(200,200,200);
+  border-right-width: 1px;
+  border-top-width: 1px;
+  right: -5px;
+  top: -5px;
+}
+#buy:after {
+  border-bottom-width: 1px;
+  border-color:rgb(200,200,200);
+  border-left-width: 1px;
+  bottom: -5px;
+  left: -5px;
+}
+#buy:hover,
+#buy.hover {
+  background-color:rgb(200,200,200);
+}
+#buy:hover:before,
+#buy.hover:before,
+#buy:hover:after,
+#buy.hover:after {
+  height: 100%;
+  width: 100%;
+}
+
+#change{
+  background-color:rgb(143,73,245);
+  border: none;
+  color: rgb(200,200,200);
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'Flavors', cursive;
+  font-size: 1em;
+  font-size: 30px;
+  line-height: 1em;
+  left:200px;
+  margin-top:220px;
+  outline: none;
+  padding: 12px 40px 10px;
+  position: absolute;
+  font-weight: 700;
+}
+#change:before,
+#change:after {
+  border-color: transparent;
+  -webkit-transition: all 0.0s;
+  transition: all 0.0s;
+  border-style: solid;
+  border-width: 0;
+  content: "";
+  height: 24px;
+  position: absolute;
+  width: 12px;
+}
+#change:before {
+  border-color:rgb(143,73,245);
+  border-right-width: 1px;
+  border-top-width: 1px;
+  right: -5px;
+  top: -5px;
+}
+#change:after {
+  border-bottom-width: 1px;
+  border-color:rgb(143,73,245);
+  border-left-width: 1px;
+  bottom: -5px;
+  left: -5px;
+}
+#change:hover,
+#change.hover {
+  background-color:rgb(200,200,200);
+  color:rgb(143,73,245);
+}
+#change:hover:before,
+#change.hover:before,
+#change:hover:after,
+#change.hover:after {
+  height: 100%;
+  width: 100%;
+}
+#supplyvalue{
+  border-radius:8px;
+  height: 30px;
+  width: 80px;
+}
+ul{
+  margin-top:20px;
+  margin-bottom:20px;
+
+}
+body{
+  background-color:rgb(30,30,30);
+  line-height:2.3em;
+}
+::-webkit-scrollbar{width: 16px;}
+::-webkit-scrollbar-track {background-color:rgb(255,208,59);}
+::-webkit-scrollbar-thumb {background-color:rgb(255,208,59);border-radius: 5px;}
+::-webkit-scrollbar-thumb:hover {background: rgb(255,208,59);}
+::-webkit-scrollbar-button:start:decrement,::-webkit-scrollbar-button:end:increment {
+ width:16px;height:16px;background:rgb(255,208,59);}
+ #Select{
+   font-family: 'Flavors', cursive;
+   font-size:55px;
+   margin-top:24%;
+   margin-left:auto;
+   margin-bottom:2%;
+   margin-right:auto;
+   width:310px;
+   text-shadow: 4px 4px 4px #3f3f3f;
+   min-width:310px;
+ }
+
+ #ours{
+   margin-top:auto;
+   margin-left:auto;
+   margin-right:auto;
+   margin-bottom:auto;
+   display: block;
+   width:800px;
+   font-family: 'Flavors', cursive;
+   font-size:18px;
+ }
+ #thiers{
+   margin-top:10%;
+   margin-left:auto;
+   margin-right:auto;
+   margin-bottom:auto;
+   display: block;
+   width:800px;
+   font-family: 'Flavors', cursive;
+   font-size:25px;
+ }
+ #redmem{
+   padding-left:11.3%;
+   text-shadow: 2px 2px 2px #f00000;
+ }
+ #bluemem{
+   padding-right:12.2%;
+   text-shadow: 2px 2px 2px #0000f0;
+ }
+ #whitemem{
+   font-family: 'Flavors', cursive;
+   margin-top:13%;
+   margin-left:auto;
+   margin-bottom:auto;
+   margin-right:auto;
+   width:17px;
+   text-shadow: 2px 2px 2px #abc;
+ }
+ #red{
+   font-family: 'Flavors',cursive;
+   margin-top:auto;
+   margin-left:auto;
+   margin-right:auto;
+   margin-bottom:auto;
+   width:150px;
+ }
+ #blue{
+   font-family: 'Flavors',cursive;
+   margin-top:auto;
+   margin-left:auto;
+   margin-right:auto;
+   margin-bottom:auto;
+   width:150px;
+ }
+ #white{
+   font-family: 'Flavors', cursive;
+   margin-top:auto;
+   margin-left:auto;
+   margin-bottom:auto;
+   margin-right:auto;
+   width:205px;
+ }
+ #stone{
+   top:120px;
+ }
+ #name{
+ display:flex;
+ position:absolute;
+ top:64%;
+ left:50%;
+ padding-top:20px;
+ transform:translate(-50%,-50%)
+ }
+ #gamestart{
+ font-family: 'Kelly Slab', cursive;
+ font-size:18px;
+ height:0px;
+ text-shadow: 2px 2px 2px #aaa;
+ position:absolute;
+ top:75%;
+ left:50%;
+ transform:translate(-50%,-50%)
+
+ }
+ #what{
+ font-family: 'Kelly Slab', cursive;
+ font-size:10px;
+ height:0px;
+ text-shadow: 1px 1px 1px #aaa;
+ position:absolute;
+ top:83%;
+ left:50%;
+ transform:translate(-50%,-50%)
+ }
+ #how{
+ font-family: 'Kelly Slab', cursive;
+ font-size:10px;
+ height:0px;
+ text-shadow: 1px 1px 1px #aaa;
+ position:absolute;
+ top:86%;
+ left:50%;
+ transform:translate(-50%,-50%)
+ }

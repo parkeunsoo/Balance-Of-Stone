@@ -1,0 +1,255 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>BalanceOfStone!!!</title>
+  <link href="https://fonts.googleapis.com/css?family=Alex+Brush|Barrio|Love+Ya+Like+A+Sister|Poiret+One|Bungee+Inline|Condiment|Londrina+Solid|Creepster|Crushed|Kelly+Slab|Flavors|Marvel|Monofett|Mystery+Quest|Six+Caps|Vampiro+One|Orbitron|Yesteryear" rel="stylesheet">
+  <link rel="stylesheet" href="balanceofstone.css" type="text/css">
+<link rel="stylesheet" href="balanceofstone.css" type="text/css">
+<script src=./balanceofstone.js></script>
+</head>
+
+<style>
+
+</style>
+
+<body>
+<div class="information">
+    <span id="todayrevenue">Today Revenue&nbsp:&nbsp<span id="revenue" style= "font-size:25px"></span></span>
+    <span id="members">
+      <div id=imgmem>
+      <img src="./images/redname2.png" height=63px  width=100px style= "padding-left:5%;padding-right:5%"></img>
+      <img src=./images/bluename2.png height=63px  width=110px style= "padding-left:5%;padding-right:5%"></img>
+      <img src=./images/whitename2.png height=63px  width=90px style= "padding-left:5%;padding-right:5%"></img>
+     </div>
+      <div id=mem>
+      <span id="redmem" style="color:rgb(146,0,0);margin-left:4%;margin-right:auto"></span>
+      <span id="bluemem" style="color:rgb(0,112,192);margin-left:31%;margin-right:auto"></span>
+      <span id="whitemem" style="color:rgb(208,206,206);margin-left:17%;margin-right:auto"></span>
+    </div>
+  </span>
+  <div class="dropdown"onmouseover=border1() onmouseout=border2()>
+    <button class="dropbtn" id="EnergyBoard">ENERGY BOARD</button>
+    <div class="dropdown-content">
+      <ul style="margin-top:auto;margin-bottom:17px"><span id="redsup"style="color:rgb(146,0,0);"></span></ul>
+      <ul style="margin-top:auto;margin-bottom:17px"><span id="bluesup"style="color:rgb(0,112,192);"></span></ul>
+      <ul style="margin-top:auto;margin-bottom:17px"><span id="whitesup"style="color:rgb(208,206,206);"></span></ul>
+    </div>
+  </div>
+      </div>
+  <div class="content">
+    <span id=shop onclick=popup(0)>Shop</span>
+    <span id=power onclick="popup(1);queryPower();queryallpower();">your&nbsppower</span>
+    <span id=stone onclick="popup(2);querystone();">your&nbspstone</span>
+    <span id=game>Game</span>
+  </div>
+  <div class="contentimg">
+    <span id=shopimg onclick=popup(0)><img src=./images/shop.png height=140px; width=110px;></img></span>
+    <span id=powerimg onclick="popup(1);queryPower();queryallpower();"><img src=./images/altong.png ></img></span>
+    <span id=time onclick=distribution();><span id=time1></span><span>&nbsp:&nbsp</span><span id=time2></span><span>&nbsp:&nbsp</span><span id=time3></span></span>
+    <span id=stoneimg onclick="popup(2);querystone();"><img src=./images/yourstone.png height=140px; width=127px;></img></span>
+    <sapn id=gameimg><img src=./images/sadari.png height=150px; width=125px;></img></span>
+  </div>
+  <div class="changeteam" onclick=popup(4)>
+    <span id="changeteam">CHANGE&nbspTEAM</span><br>
+    <span id="ether">0.001&nbspether</span>
+  </div>
+  <div id="itempop">
+    <ul><span id=INSHOP>SHOP</span></ul>
+    <ul><div id="BronzeSpoon" height=100px;><img src="./images/bronzeSpoon.png"></img>
+        <span id=teminfo>
+          <ul id=power style="margin-top:auto; margin-bottom:auto; margin-left:auto;">POWER&nbsp:&nbsp5</ul>
+          <ul id=price style="margin-top:auto; margin-bottom:auto">PRICE&nbsp:&nbsp5000&nbspstone</ul>
+          <button id=buy onClick="buystoneitem(0)" style="cursor:pointer;margin-left:115px;">BUY</button>
+        </span>
+      </div>
+    </ul>
+    <ul><div id="SilverSpoon"><img src="./images/silverSpoon.png"></img>
+        <span id=teminfo>
+          <ul id=power style="margin-top:auto; margin-bottom:auto; margin-left:auto;">POWER&nbsp:&nbsp15</ul>
+          <ul id=price style="margin-top:auto; margin-bottom:auto">PRICE&nbsp:&nbsp15000&nbspstone</ul>
+          <button id=buy onClick="buystoneitem(1)"style="cursor:pointer;margin-left:115px;">BUY</button>
+      </span>
+      </div>
+    </ul>
+    <ul><div id="GoldSpoon"><img src="./images/goldSpoon.png"></img>
+        <span id=teminfo>
+          <ul id=power style="margin-top:auto; margin-bottom:auto; margin-left:auto;">POWER&nbsp:&nbsp25</ul>
+          <ul id=price style="margin-top:auto; margin-bottom:auto">PRICE&nbsp:&nbsp25000&nbspstone</ul>
+          <button id=buy onClick="buystoneitem(2)"style="cursor:pointer;margin-left:115px;">BUY</button>
+        </span>
+      </div>
+    </ul>
+    <ul><div id="BronzeAx"><img src="./images/bronzeAx.png"></img>
+        <span id=teminfo>
+          <ul id=power style="margin-top:auto; margin-bottom:auto; margin-left:auto;padding-left:20px">POWER&nbsp:&nbsp35</ul>
+          <ul id=price style="margin-top:auto; margin-bottom:auto; padding-left:20px">PRICE&nbsp:&nbsp35000&nbspstone</ul>
+          <button id=buy onClick="buystoneitem(3)" style="margin-left:95px;cursor:pointer;">BUY</button>
+        </span>
+      </div>
+    </ul>
+    <ul><div id="SilverAx"><img src="./images/silverAx.png"></img>
+      <span id=teminfo>
+        <ul id=power style="margin-top:auto; margin-bottom:auto; margin-left:auto; padding-left:20px">POWER&nbsp:&nbsp45</ul>
+        <ul id=price style="margin-top:auto; margin-bottom:auto; padding-left:20px">PRICE&nbsp:&nbsp45000&nbspstone</ul>
+        <button id=buy onClick="buystoneitem(4)" style="margin-left:95px;cursor:pointer;">BUY</button>
+      </span>
+    </div></ul>
+    <ul><div id="GoldAx"><img src="./images/goldAx.png"></img>
+      <span id=teminfo>
+        <ul id=power style="margin-top:auto; margin-bottom:auto; margin-left:auto;padding-left:20px">POWER&nbsp:&nbsp60</ul>
+        <ul id=price style="margin-top:auto; margin-bottom:auto; padding-left:20px">PRICE&nbsp:&nbsp60000&nbspstone</ul>
+        <button id=buy onClick="buystoneitem(5)"  style="margin-left:95px;cursor:pointer;">BUY</button>
+      </span>
+    </div></ul>
+    <ul><div id="BronzeShovel"><img src="./images/bronzeShovel.png"></img>
+      <span id=teminfo>
+        <ul id=power style="margin-top:auto; margin-bottom:auto; margin-left:auto;padding-left:20px">POWER&nbsp:&nbsp100</ul>
+        <ul id=price style="margin-top:auto; margin-bottom:auto; padding-left:20px">PRICE&nbsp:&nbsp0.02&nbspEther</ul>
+        <button id=buy onClick="buyethitem(6)" style="margin-left:95px;cursor:pointer;">BUY</button>
+      </span>
+    </div></ul>
+    <ul><div id="SilverShovel"><img src="./images/silverShovel.png"></img>
+      <span id=teminfo>
+        <ul id=power style="margin-top:auto; margin-bottom:auto; margin-left:auto;padding-left:20px">POWER&nbsp:&nbsp300</ul>
+        <ul id=price style="margin-top:auto; margin-bottom:auto; padding-left:20px">PRICE&nbsp:&nbsp0.05&nbspEther</ul>
+        <button id=buy onClick="buyethitem(7)" style="margin-left:95px;cursor:pointer;">BUY</button>
+      </span>
+    </div></ul>
+    <ul><div id="GoldShovel"><img src="./images/goldShovel.png"></img>
+      <span id=teminfo>
+        <ul id=power style="margin-top:auto; margin-bottom:auto; margin-left:auto;padding-left:20px">POWER&nbsp:&nbsp450</ul>
+        <ul id=price style="margin-top:auto; margin-bottom:auto; padding-left:20px">PRICE&nbsp:&nbsp0.07&nbspEther</ul>
+        <button id=buy onClick="buyethitem(8)" style="margin-left:95px;cursor:pointer;">BUY</button>
+      </span>
+    </div></ul>
+</div>
+<div id="powerpop">
+  <ul><span id=INpower>Item&nbspList</span></ul>
+  <ul><div id="BronzeSpoon" height=100px;><img src="./images/bronzeSpoon2.png"></img>
+      <span id=teminfo>
+        <ul id=power style="margin-top:auto; margin-bottom:auto; margin-left:auto;padding-left:35px">POWER&nbsp:&nbsp5</ul>
+        <ul id=price style="margin-top:auto; margin-bottom:auto;padding-left:35px">Amount&nbsp:&nbsp<span id=ambronzespoon></span></ul>
+      </span>
+      <span id="ampower1" class="ampower" style="margin-left:147.7px">
+      </span>
+    </div>
+  </ul>
+  <ul><div id="SilverSpoon"><img src="./images/silverSpoon2.png"></img>
+      <span id=teminfo>
+        <ul id=power style="margin-top:auto; margin-bottom:auto; margin-left:auto;padding-left:35px">POWER&nbsp:&nbsp15</ul>
+        <ul id=price style="margin-top:auto; margin-bottom:auto;padding-left:35px">Amount&nbsp:&nbsp<span id=amsilverspoon></span></ul>
+    </span>
+    <span id="ampower2"class="ampower" style="margin-left:147.7px">
+    </span>
+    </div>
+  </ul>
+  <ul><div id="GoldSpoon"><img src="./images/goldSpoon2.png"></img>
+      <span id=teminfo>
+        <ul id=power style="margin-top:auto; margin-bottom:auto; margin-left:auto;padding-left:35px">POWER&nbsp:&nbsp25</ul>
+        <ul id=price style="margin-top:auto; margin-bottom:auto; padding-left:35px">Amount&nbsp:&nbsp<span id=amgoldspoon></span></ul>
+      </span>
+      <span id="ampower3"class="ampower" style="margin-left:147.7px">
+      </span>
+    </div>
+  </ul>
+  <ul><div id="BronzeAx"><img src="./images/bronzeAx2.png"></img>
+      <span id=teminfo>
+        <ul id=power style="margin-top:auto; margin-bottom:auto; margin-left:auto;padding-left:20px">POWER&nbsp:&nbsp35</ul>
+        <ul id=price style="margin-top:auto; margin-bottom:auto; padding-left:20px">Amount&nbsp:&nbsp<span id=ambronzeax></span></ul>
+      </span>
+      <span id="ampower4"class="ampower">
+      </span>
+    </div>
+  </ul>
+  <ul><div id="SilverAx"><img src="./images/silverAx2.png"></img>
+    <span id=teminfo>
+      <ul id=power style="margin-top:auto; margin-bottom:auto; margin-left:auto; padding-left:20px">POWER&nbsp:&nbsp45</ul>
+      <ul id=price style="margin-top:auto; margin-bottom:auto; padding-left:20px">Amount&nbsp:&nbsp<span id=amsilverax></span></ul>
+    </span>
+    <span id="ampower5"class="ampower">
+    </span>
+  </div></ul>
+  <ul><div id="GoldAx"><img src="./images/goldAx2.png"></img>
+    <span id=teminfo>
+      <ul id=power style="margin-top:auto; margin-bottom:auto; margin-left:auto;padding-left:20px">POWER&nbsp:&nbsp60</ul>
+      <ul id=price style="margin-top:auto; margin-bottom:auto; padding-left:20px">Amount&nbsp:&nbsp<span id=amgoldax></span></ul>
+    </span>
+    <span id="ampower6"class="ampower">
+    </span>
+  </div></ul>
+  <ul><div id="BronzeShovel"><img src="./images/bronzeShovel2.png"></img>
+    <span id=teminfo>
+      <ul id=power style="margin-top:auto; margin-bottom:auto; margin-left:auto;padding-left:20px">POWER&nbsp:&nbsp100</ul>
+      <ul id=price style="margin-top:auto; margin-bottom:auto; padding-left:20px">Amount&nbsp:&nbsp<span id=ambronzeshovel></span></ul>
+    </span>
+    <span id="ampower7"class="ampower">
+    </span>
+  </div></ul>
+  <ul><div id="SilverShovel"><img src="./images/silverShovel2.png"></img>
+    <span id=teminfo>
+      <ul id=power style="margin-top:auto; margin-bottom:auto; margin-left:auto;padding-left:20px">POWER&nbsp:&nbsp300</ul>
+      <ul id=price style="margin-top:auto; margin-bottom:auto; padding-left:20px">Amount&nbsp:&nbsp<span id=amsilvershovel></span></ul>
+    </span>
+    <span id="ampower8"class="ampower">
+    </span>
+  </div></ul>
+  <ul><div id="GoldShovel"><img src="./images/goldShovel2.png"></img>
+    <span id=teminfo>
+      <ul id=power style="margin-top:auto; margin-bottom:auto; margin-left:auto;padding-left:20px">POWER&nbsp:&nbsp450</ul>
+      <ul id=price style="margin-top:auto; margin-bottom:auto; padding-left:20px">Amount&nbsp:&nbsp<span style="margin-top:auto;margin-bottom:auto;"id=amgoldshovel></span></ul>
+    </span>
+    <span id="ampower9"class="ampower">
+    </span>
+  </div></ul>
+  <ul><span id=Ipower>Your&nbspPower&nbsp:&nbsp&nbsp<span id=yourpower></span></span></ul>
+</div>
+<div id=stonepop>
+  <ul style="margin-left:80px;margin-top:35px;">
+    Your&nbspStone
+  </ul>
+  <ul style="margin-top:30px;margin-left:65px;"><div id="imgstone"><img src="./images/stone.png" height=55px width=49px></img>
+      <span id=allstone>
+        <span>&nbsp</span>
+        <span id=valuestone></span>
+    </span>
+    </div>
+  </ul>
+  <ul>
+  <button id=supplyenergy onclick=popup(3);>Supply&nbspEnergy</button>
+</ul>
+</div>
+<div id=suppop>
+  <div id=score>
+  <ul style="font-size:30px;margin-top:12px;text-align:center;padding:0;">SCORE</ul>
+  <ul style="margin-top:15px;margin-bottom:6px;padding:0;text-align:center;"><span id="redsup2"style="color:rgb(146,0,0);font-size:20px;"></span></ul>
+  <ul style="margin-top:auto;margin-bottom:6px;padding:0;text-align:center;"><span id="bluesup2"style="color:rgb(0,112,192);font-size:20px;"></span></ul>
+  <ul style="margin-top:auto;margin-bottom:6px;padding:0;text-align:center;"><span id="whitesup2"style="color:rgb(208,206,206);font-size:20px;"></span></ul>
+</div>
+  <ul style="font-size:30px;text-align:center;padding:0;"><input id=supplyvalue></input></ul>
+  <button id=send onclick=supplyenergy();>SEND</button>
+</div>
+<div id=changepop>
+  <div id ="ours">
+    <img id=redimage style="margin-left:90px;margin-top:50px;cursor:pointer;"src="./images/redteam.png" name="redimg" onClick=select(1) onmouseover="mouseon();redteamimg();" onmouseout="mouseout();redteamimg();" height="180px" width="153px">
+    <img id="blueimage" style="margin-left:80px;margin-top:50px;cursor:pointer;"src="./images/blueteam.png" name="blueimg" onClick=select(2) onmouseover= "mouseon();blueteamimg();" onmouseout="mouseout();blueteamimg();" height="180px" width="153px">
+  <img id="whiteimage" style="margin-left:80px;margin-top:50px;cursor:pointer;" src="./images/whiteteam.png" name="whiteimg" onClick=select(3); onmouseover="mouseon();whiteteamimg();" onmouseout="mouseout();whiteteamimg();" height="180px" width="155px">
+  <button id=change onClick=changeteam(); style="cursor:pointer;margin-left:115px;">Change</button>
+</div>
+</div>
+<script>
+window.onload=function(){
+  startApp();
+  redEnergy();
+  blueEnergy();
+  whiteEnergy();
+  allRevenue();
+  redget();
+  blueget();
+  whiteget();
+  queryItem0();queryItem1();queryItem2();queryItem3();queryItem4();queryItem5();queryItem6();queryItem7();queryItem8();
+}
+</script>
+</body>
+
+</html>

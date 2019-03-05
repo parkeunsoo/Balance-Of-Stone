@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+
+  <title>Select Team!!</title>
+  <link rel="stylesheet"
+  <link href="https://fonts.googleapis.com/css?family=IM+Fell+English|Londrina+Solid|Patrick+Hand+SC" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Alex+Brush|Barrio|Love+Ya+Like+A+Sister|Poiret+One|Bungee+Inline|Condiment|Londrina+Solid|Creepster|Crushed|Kelly+Slab|Flavors|Marvel|Monofett|Mystery+Quest|Six+Caps|Vampiro+One|Orbitron|Yesteryear" rel="stylesheet">
+  <link rel="stylesheet" href="balanceofstone.css" type="text/css">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <link rel="stylesheet" href="balanceofstone.css" type="text/css">
+  <script src="https://cdn.rawgit.com/ethereum/web3.js/develop/dist/web3.js"></script>
+  <script src ="./balanceofstone.js"></script>
+
+  <style>
+
+  </style>
+</head>
+<body>
+
+<div id = "thiers"><span id="redmem" style="color:rgb(146,0,0);float=left"></span><span id="bluemem"style="color:rgb(0,112,192);float:right"></span>
+<div id = "ours"><img id=redimage src="redteam.png" name="redimg" style="float:left;cursor:pointer"onClick=select(1) onmouseover="mouseon();redteamimg();" onmouseout="mouseout();redteamimg();" height="230px" width="195px">
+  <img id=blueimage src = "blueteam.png" name="blueimg" onClick = select(2) style ="float:right;cursor:pointer;" onmouseover= "mouseon();blueteamimg();" onmouseout="mouseout();blueteamimg();" height="230px" width="195px"></div>
+  <div id="Select" style="color:rgb(255,208,59);cursor:pointer;"  onclick="SignUp();" onmouseover=changesize() onmouseout=changesize()>&nbspSelect&nbspTeam!!</div>
+  <div id="whitemem" style="color:rgb(208,206,206)"></div>
+  <div id="white" onClick=select(3);><img id= "whiteimage"style="cursor:pointer;"src="whiteteam.png" name="whiteimg"  onmouseover="mouseon();whiteteamimg();" onmouseout="mouseout();whiteteamimg();" height="230px" width="205px"></div>
+<script>
+  window.onload=function(){
+    startApp();
+    redget();
+    blueget();
+    whiteget();
+  }
+</script>
+</body>
+</html>
