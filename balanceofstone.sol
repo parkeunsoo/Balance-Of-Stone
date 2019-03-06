@@ -1,4 +1,4 @@
-pragma solidity ^0.4.0;
+pragma solidity ^0.5.1;
 
 contract Owned {
  
@@ -22,11 +22,11 @@ contract Owned {
         emit TransferOwnership(oldaddr, owner);
     }
 }
-////////////////////////////////////////////////////////////////////////////////
+
 contract BalanceOfStone is Owned{
     mapping(address => userinfo) User;
-    BosConfig  GameInfo = BosConfig(0x692a70d2e424a56d2c6c27aa97d1a86395877b3a);
-    Distribution Energy = Distribution(0x692a70d2e424a56d2c6c27aa97d1a86395877b3a);
+    BosConfig  GameInfo = BosConfig(0x692a70D2e424a56D2C6C27aA97D1a86395877b3A);
+    Distribution Energy = Distribution(0x692a70D2e424a56D2C6C27aA97D1a86395877b3A);
     struct userinfo{
     uint256 stoneBalance; // Balance of Stone
     uint256 team; // red , blue , white
@@ -43,7 +43,7 @@ contract BalanceOfStone is Owned{
     uint256 Reward; // 10% of Revneue (it is stacked more daily)
     uint256 Weather; // It states the weather condition of bos-25.
 
-////////////////////////////////////////////////////////////////////////////////    
+  
     function SignUp() public{
         require(!User[msg.sender].register);
         StartTime = block.timestamp;
@@ -103,25 +103,25 @@ contract BalanceOfStone is Owned{
         revert();
     }
   
-////////////////////////////////////////////////////////////////////////////////
-    function QueryRace() constant public returns(uint256){
+
+    function QueryRace() view public returns(uint256){
         return User[msg.sender].team;
     }
-    function QueryStone() constant public returns(uint256){
+    function QueryStone() view public returns(uint256){
         require(User[msg.sender].register);
         return User[msg.sender].stoneBalance + User[msg.sender].power * (block.timestamp-User[msg.sender].updateTime);
     }
-    function Querypower() constant public returns(uint256){
+    function Querypower() view public returns(uint256){
         require(User[msg.sender].register);
         return User[msg.sender].power;
     }
-    function QueryItem(uint256 ItemId) constant public returns(uint)
+    function QueryItem(uint256 ItemId) view public returns(uint)
     {
         require(User[msg.sender].register);
         return User[msg.sender].ItemSlot[ItemId];
     }
    
-////////////////////////////////////////////////////////    ////////////////////////
+
 // real balance + balance to be deposited
     function WalletStone() private{
          User[msg.sender].stoneBalance += User[msg.sender].power * (block.timestamp-User[msg.sender].updateTime);
@@ -140,16 +140,16 @@ contract BalanceOfStone is Owned{
   /*function CheckStone() constant public returns(uint256){
        return User[msg.sender].stoneBalance;
     }*/
-////////////////////////////////////////////////////////////////////////////////
+
     function SetReward() public payable{
     Reward = Revenue/10;
-    address distribution = 0x692a70d2e424a56d2c6c27aa97d1a86395877b3a;
+    address payable distribution = 0x692a70D2e424a56D2C6C27aA97D1a86395877b3A;
     distribution.transfer(Reward);
     }
  /*function Daily() public {
         
     }*/
-////////////////////////////////////////////////////////////////////////////////
+
 }
 contract BosConfig{
     
@@ -174,14 +174,14 @@ contract BosConfig{
         ItemInfo[7] = Item("Silver shovel",0.05 ether,300);
         ItemInfo[8] = Item("Gold shovel",0.07 ether,450);
     }
-////////////////////////////////////////////////////////////////////////////////
-    function getItemCost(uint256 ItemId) public constant returns(uint256){
+
+    function getItemCost(uint256 ItemId) public view returns(uint256){
         return ItemInfo[ItemId].Cost;
     }
-    function getItemPower(uint256 ItemId) public constant returns(uint256){
+    function getItemPower(uint256 ItemId) public view returns(uint256){
         return ItemInfo[ItemId].Power;
     }
-////////////////////////////////////////////////////////////////////////////////
+
 }
 contract Distribution {
     
@@ -203,14 +203,14 @@ contract Distribution {
     uint256 public blueattendant=0;
     uint256 public whiteattendant=0;
     struct ContributeInfo{
-        address User;
+        address payable User;
         uint256 Energy;
     }
     struct RankInfo{
         uint256 team;
         uint256 Energy;
     }
-    
+    //Rank Team's Energy
     function quickSort(uint256 left, uint256 right) internal{
         SetRankEnergy();
         uint256 i = left;
@@ -237,7 +237,7 @@ contract Distribution {
     function SetSupEnergy(uint256 Energy) public{
         SupEnergy += Energy;
     }
-    function GetSupEnergy()  constant public returns (uint256){
+    function GetSupEnergy() view public returns (uint256){
         return SupEnergy;
     }
     function Swap(uint256 a , uint256 b) internal{
@@ -263,13 +263,14 @@ contract Distribution {
         whiteattendant++;
         whiteEnergy += Energy;
     }
+    
     function SetRankEnergy() internal{
         RankEnergy[0].team = 0;
-        RankEnergy[0].Energy = redEnergy;
+        RankEnergy[0].Energy = redEnergy;//Red team = RankEnergy[0]
         RankEnergy[1].team = 1;
-        RankEnergy[1].Energy = blueEnergy;
+        RankEnergy[1].Energy = blueEnergy;//Blue team = RankEnergy[1]
         RankEnergy[2].team = 2;
-        RankEnergy[2].Energy = whiteEnergy;
+        RankEnergy[2].Energy = whiteEnergy;//White team = RankEnergy[2]
     }
     function SetRewardRate() internal{
         if(RankEnergy[0].team == 0){
@@ -290,31 +291,37 @@ contract Distribution {
         
     }
     function TodayReward() internal{
-        Reward = this.balance;
+        Reward = address(this).balance;
     }
     function TransferRewardToUser() public payable{ //confirm this function execute without "payable"
         
     for(uint256 i=0; i<redattendant;i++){
     RedInfo[i].User.transfer(redReward*(RedInfo[i].Energy/redEnergy));
     delete RedInfo[i];
-    }
     i=0;
+    }
+    
     for(uint256 j=0; j<blueattendant;j++){
-    BlueInfo[i].User.transfer(blueReward*(RedInfo[i].Energy/blueEnergy));
-    delete BlueInfo[i];   
-    }
+    BlueInfo[j].User.transfer(blueReward*(RedInfo[j].Energy/blueEnergy));
+    delete BlueInfo[j];   
     j=0;
-    for(uint256 k=0; k<redattendant;k++){
-    WhiteInfo[i].User.transfer(whiteReward*(WhiteInfo[i].Energy/whiteEnergy));
-    delete WhiteInfo[i];
     }
+    
+    for(uint256 k=0; k<redattendant;k++){
+    WhiteInfo[k].User.transfer(whiteReward*(WhiteInfo[k].Energy/whiteEnergy));
+    delete WhiteInfo[k];
     k=0;
+    }
+    
     } 
-    /*function ResetInfo() internal{
-        
-    }*/
+    
+    function ResetInfo() internal{
+        redattendant=0;
+        blueattendant=0;
+        whiteattendant=0;
+    }
    
-    function Reward() public payable {
+    function Rewards() public payable {
         TodayReward();
         Rank();
         SetRewardRate();
